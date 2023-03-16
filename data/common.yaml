@@ -1,0 +1,66 @@
+---
+zot::archive_download_arch: amd64
+zot::archive_download_base: https://github.com/project-zot/zot/releases
+zot::archive_download_os: linux
+zot::archive_download_url: ~
+zot::archive_download_version: v1.4.3
+zot::binary_path: /usr/bin/zot
+zot::data_dir: /var/lib/zot
+zot::config_dist_spec_version: 1.0.1-dev
+zot::config_dir: /etc/zot
+zot::config_epp_parameters: {}
+zot::config_epp_template: ~
+zot::config_extensions_lint:
+  enable: false
+zot::config_extensions_metrics:
+  enable: false
+zot::config_extensions_scrub:
+  enable: false
+zot::config_extensions_search:
+  enable: false
+zot::config_extensions_sync:
+  enable: false
+zot::config_http:
+  address: 0.0.0.0
+  port: 5000
+zot::config_log:
+  audit: /var/log/zot/audit.log
+  level: info
+zot::config_storage:
+  rootdirectory: /var/lib/zot
+  commit: true
+  dedupe: true
+  gc: true
+  gcDelay: 1h
+  gcInterval: 24h
+zot::config_file: /etc/zot/config.yaml
+zot::config_hash: ~
+zot::gid: 991
+zot::group: zot
+zot::http_address: 0.0.0.0
+zot::http_auth: {}
+zot::http_port: 5000
+zot::http_realm: zot
+zot::http_tls: {}
+zot::install_method: url
+zot::log_dir: /var/log/zot
+zot::manage_config_dir: true
+zot::manage_data_dir: true
+zot::manage_group: true
+zot::manage_log_dir: true
+zot::manage_service_file: true
+zot::manage_service: true
+zot::manage_sync_credentials_file: true
+zot::manage_user: true
+zot::package_ensure: present
+zot::package_name: zot
+zot::service_enable: true
+zot::service_ensure: running
+zot::service_epp_parameters: {}
+zot::service_epp_template: ~
+zot::service_name: zot
+zot::sync_credentials_file: /etc/zot/sync-credentials.json
+zot::sync_credentials: {}
+zot::uid: 991
+zot::user: zot
+...

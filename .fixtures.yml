@@ -1,0 +1,10 @@
+# This file can be used to install module dependencies for unit testing
+# See https://github.com/puppetlabs/puppetlabs_spec_helper#using-fixtures for details
+---
+fixtures:
+  repositories:
+    "accounts": "https://github.com/puppetlabs/puppetlabs-accounts.git"
+    "archive": "https://github.com/voxpupuli/puppet-archive.git"
+    "extlib": "https://github.com/voxpupuli/puppet-extlib.git"
+    "stdlib": "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    "systemd": "https://github.com/voxpupuli/puppet-systemd.git"

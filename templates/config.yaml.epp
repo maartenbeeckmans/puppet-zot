@@ -1,0 +1,45 @@
+<%- |
+  String         $dist_spec_version,
+  Hash           $http,
+  Hash           $log,
+  Hash           $storage,
+  Optional[Hash] $extensions_lint,
+  Optional[Hash] $extensions_metrics,
+  Optional[Hash] $extensions_scrub,
+  Optional[Hash] $extensions_search,
+  Optional[Hash] $extensions_sync,
+| -%>
+# File managed by Puppet
+---
+distSpecVersion: <%= $dist_spec_version %>
+http:
+<%= zot::to_yaml($http, 1) %>
+
+log:
+<%= zot::to_yaml($log, 1) %>
+
+storage:
+<%= zot::to_yaml($storage, 1) %>
+
+extensions:
+<% if $extensions_lint { -%>
+  lint:
+<%= zot::to_yaml($extensions_lint, 2) %>
+<% } -%>
+<% if $extensions_metrics { -%>
+  metrics:
+<%= zot::to_yaml($extensions_metrics, 2) %>
+<% } -%>
+<% if $extensions_search { -%>
+  search:
+<%= zot::to_yaml($extensions_search, 2) %>
+<% } -%>
+<% if $extensions_scrub { -%>
+  scrub:
+<%= zot::to_yaml($extensions_scrub, 2) %>
+<% } -%>
+<% if $extensions_sync { -%>
+  sync:
+<%= zot::to_yaml($extensions_sync, 2) %>
+<% } -%>
+...

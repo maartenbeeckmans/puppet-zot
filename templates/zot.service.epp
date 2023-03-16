@@ -1,0 +1,25 @@
+<%- |
+  String $zot_binary,
+  String $zot_config,
+  String $zot_user,
+  String $zot_group,
+| -%>
+# File managed by Puppet
+[Unit]
+Description=OCI Distribution Registry
+Documentation=https://zotregistry.io/
+After=network.target auditd.service local-fs.target
+
+[Service]
+Type=simple
+ExecStartPre=<%= $zot_binary %> verify <%= $zot_config %>
+ExecStart=<%= $zot_binary %> serve <%= $zot_config %>
+Restart=on-failure
+User=<%= $zot_user %>
+Group=<%= $zot_group %>
+LimitNOFILE=500000
+MemoryHigh=30G
+MemoryMax=32G
+
+[Install]
+WantedBy=multi-user.target

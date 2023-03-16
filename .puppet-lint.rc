@@ -1,0 +1,3 @@
+--relative
+--fail-on-warnings
+--no-140chars-check
