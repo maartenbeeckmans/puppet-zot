@@ -6,7 +6,18 @@
   "license": "Apache-2.0",
   "source": "",
   "dependencies": [
-
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 7.0.0 <= 8.5.0"
+    },
+    {
+      "name": "puppet/systemd",
+      "version_requirement": ">= 3.1.0 <= 4.0.1"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 4.3.0 <= 6.1.1"
+    }
   ],
   "operatingsystem_support": [
     {
