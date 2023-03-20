@@ -2,9 +2,10 @@
   "name": "maartenbeeckmans-zot",
   "version": "0.1.0",
   "author": "Maarten Beeckmans",
-  "summary": "",
+  "summary": "Install and configure zot registry",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/maartenbeeckmans/puppet-zot",
+  "issues_url": "https://github.com/maartenbeeckmans/puppet-zot/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",

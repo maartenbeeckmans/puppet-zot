@@ -22,6 +22,7 @@ class zot::config {
       home       => $zot::data_dir,
       uid        => $zot::uid,
       gid        => $zot::gid,
+      shell      => '/sbin/nologin',
       forcelocal => true,
     }
   }
