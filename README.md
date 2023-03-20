@@ -19,4 +19,4 @@ include zot
 
 ## Reference
 
-See reference.md
+See [REFERENCE.md](./REFERENCE.md)
