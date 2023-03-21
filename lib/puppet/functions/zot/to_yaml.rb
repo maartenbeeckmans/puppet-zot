@@ -2,6 +2,10 @@
 
 # https://github.com/puppetlabs/puppet-specifications/blob/master/language/func-api.md#the-4x-api
 Puppet::Functions.create_function(:"zot::to_yaml") do
+  # @param data The data that should be transformed to YAML.
+  # @param depth Optional. An Integer which described the number of space characters used to indent.
+  # @param options Optional. Pass a Hash of additional options. Refer to Ruby's psych library.
+  # @return Returns a String with the structured data in YAML format.
   dispatch :to_yaml do
     param 'Any', :data
     optional_param 'Integer', :depth
