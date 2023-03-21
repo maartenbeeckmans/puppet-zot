@@ -56,11 +56,12 @@ class zot::config {
 
   if $zot::manage_sync_credentials_file {
     file { $zot::sync_credentials_file:
-      ensure  => file,
-      owner   => $zot::user,
-      group   => $zot::group,
-      mode    => '0600',
-      content => to_json_pretty($zot::sync_credentials),
+      ensure    => file,
+      owner     => $zot::user,
+      group     => $zot::group,
+      mode      => '0600',
+      show_diff => false,
+      content   => to_json_pretty($zot::sync_credentials),
     }
   }
 
