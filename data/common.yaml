@@ -37,11 +37,6 @@ zot::config_file: /etc/zot/config.yaml
 zot::config_hash: ~
 zot::gid: 991
 zot::group: zot
-zot::http_address: 0.0.0.0
-zot::http_auth: {}
-zot::http_port: 5000
-zot::http_realm: zot
-zot::http_tls: {}
 zot::install_method: url
 zot::log_dir: /var/log/zot
 zot::manage_config_dir: true
